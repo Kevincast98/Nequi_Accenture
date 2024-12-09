@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "b5e84420-b450-4739-a522-da49f25ff485",
+		"name": "Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28694979"
+	},
+	"item": [
+		{
+			"name": "Franchises",
+			"item": [
+				{
+					"name": "Create-Franchise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Franchise 7\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/franchises/create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"franchises",
+								"create",
+								""
+							]
+						},
+						"description": "## CREAR NUEVA FRANQUICIA\n\n**Endpoint**: Crear franquicia\n\n**Descripción:**\n\nEste endpoint permite crear una nueva franquicia. Se debe enviar la información de la franquicia en el cuerpo de la solicitud para crearla en el sistema.\n\n**URL:**\n\n**POST:** _/api/franchises/create/_\n\nParámetros:\n\n- Ninguno.\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre asignado a una franquicia (string)\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Franchises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/franchises/get/all/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"franchises",
+								"get",
+								"all",
+								""
+							]
+						},
+						"description": "## **OBTENER TODAS LAS FRANQUICIAS**\n\n**Endpoint**: Obtener franquicias\n\n**Descripción:**\n\nEste endpoint permite obtener la lista de todas las franquicias disponibles en el sistema.\n\n**URL:**\n\n**POST:** _/api/franchises/get/all/_\n\nParámetros:\n\n- Ninguno.\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Franchise-By-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/franchises/get/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"franchises",
+								"get",
+								"1",
+								""
+							]
+						},
+						"description": "## **OBTENER FRANQUICIA POR ID**\n\n**Endpoint**: Obtener franquicia por ID\n\n**Descripción:**\n\nEste endpoint permite obtener la información de una franquicia específica utilizando su identificador único.\n\n**URL:**\n\n**POST:** _/api/franchises/get/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la franquicia que se desea consultar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Franchise",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Franchise 6 UPTDATE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/franchises/update/6/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"franchises",
+								"update",
+								"6",
+								""
+							]
+						},
+						"description": "## **ACTUALIZAR FRANQUICIA**\n\n**Endpoint**: Actualizar franquicia\n\n**Descripción:**\n\nEste endpoint permite actualizar la información de una franquicia específica utilizando su identificador único.\n\n**URL:**\n\n**POST:** _/api/franchises/update/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la franquicia que se desea actualizar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre de la franquicia.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Franchise",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/franchises/delete/5/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"franchises",
+								"delete",
+								"5",
+								""
+							]
+						},
+						"description": "## **ELIMINAR FRANQUICIA**\n\n**Endpoint**: Eliminar franquicia\n\n**Descripción:**\n\nEste endpoint permite eliminar una franquicia específica utilizando su identificador único.\n\n**URL:**\n\n**POST:** _/api/franchises/delete/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la franquicia que se desea eliminar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agency",
+			"item": [
+				{
+					"name": "Create-Agency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Agency prueba\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/agencies/create/6/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"agencies",
+								"create",
+								"6",
+								""
+							]
+						},
+						"description": "## **CREAR NUEVA AGENCIA**\n\n**Endpoint**: Crear agencia\n\n**Descripción:**\n\nEste endpoint permite crear una nueva agencia asociada a una franquicia existente. Se debe enviar la información de la agencia en el cuerpo de la solicitud y proporcionar el ID de la franquicia a la que se asociará.\n\n**URL:**\n\n**POST:** _/api/agencies/create/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la franquicia a la que se asociará la nueva agencia (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre de la agencia (string).\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Agencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/agencies/get/all/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"agencies",
+								"get",
+								"all",
+								""
+							]
+						},
+						"description": "## **OBTENER AGENCIAS**\n\n**Endpoint**: Obtener todas las agencias\n\n**Descripción:**\n\nEste endpoint permite obtener la lista de todas las agencias registradas en el sistema.\n\n**URL:**\n\n**POST:** _/api/agencies/get/all/_\n\nParámetros:\n\n- Ninguno.\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Agency-By-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/agencies/get/11/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"agencies",
+								"get",
+								"11",
+								""
+							]
+						},
+						"description": "## **OBTENER AGENCIA POR ID**\n\n**Endpoint**: Obtener agencia por ID\n\n**Descripción:**\n\nEste endpoint permite obtener una agencia específica utilizando su ID. Si la agencia existe, se devolverán los detalles de la agencia solicitada.\n\n**URL:**\n\n**POST:** _/api/agencies/get/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la Agencia que se desea consultar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Agency",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Agency Name 11\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/agencies/update/11/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"agencies",
+								"update",
+								"11",
+								""
+							]
+						},
+						"description": "## **ACTUALIZAR AGENCIA**\n\n**Endpoint**: Actualizar agencia\n\n**Descripción:**\n\nEste endpoint permite actualizar una agencia existente utilizando su ID. Si se proporciona un nuevo nombre, se actualizan los campos correspondientes. Si no se proporciona un nuevo valor para algún campo, se mantiene el valor actual.\n\n**URL:**\n\n**POST:** _/api/agencies/update/{id}/_\n\nParámetros:\n\n- id (requerido): El ID de la agencia que se desea actualizar. (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre de la agencia o sucursal.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Agency",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/agencies/delete/9/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"agencies",
+								"delete",
+								"9",
+								""
+							]
+						},
+						"description": "## **ELIMINAR AGENCIA**\n\n**Endpoint**: Eliminar agencia\n\n**Descripción:**\n\nEste endpoint permite eliminar una agencia utilizando su ID. Si la agencia tiene productos asociados, no se podrá eliminar, y se devolverá un error. Si no se encuentra la agencia con el ID especificado, se devuelve un error indicando que no existe.\n\n**URL:**\n\n**POST:** _/api/agencies/delete/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la Agency que se desea eliminar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create-Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Product 5\",\r\n  \"stock\": 55\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/create/11/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"create",
+								"11",
+								""
+							]
+						},
+						"description": "## **CREAR PRODUCTO**\n\n**Endpoint**: Crear producto\n\n**Descripción:**\n\nEste endpoint permite crear un nuevo producto asociado a una agencia específica. Si la agencia no existe o los datos del producto son incorrectos, se devolverá un error adecuado.\n\n**URL:**\n\n**POST:** _/api/products/create/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la Agencia a la que se asociará la nueva agencia (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre de la producto(string).\n    \n- stock: cantidad de stock (int).\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/get/all/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"get",
+								"all",
+								""
+							]
+						},
+						"description": "## **OBTENER TODOS LOS PRODUCTOS**\n\n**Endpoint**: Obtener todos los productos\n\n**Descripción:**\n\nEste endpoint permite obtener la lista de todos los productos disponibles en el sistema. Si no hay productos registrados, se devolverá un mensaje adecuado.\n\n**URL:**\n\n**POST:** _/api/products/get/all/_\n\nParámetros:\n\n- Ninguno.\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Products-By-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/get/22/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"get",
+								"22",
+								""
+							]
+						},
+						"description": "## **OBTENER PRODUCTO POR ID**\n\n**Endpoint**: Obtener producto por ID\n\n**Descripción:**\n\nEste endpoint permite obtener un producto específico usando su identificador único (ID). Si el producto no se encuentra en la base de datos, se devolverá una respuesta indicando que no se ha encontrado.\n\n**URL:**\n\n**POST:** _/api/products/get/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la Producto que se desea consultar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Products 4\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/update/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"update",
+								"4",
+								""
+							]
+						},
+						"description": "## **ACTUALIZAR PRODUCTO**\n\n**Endpoint**: Actualizar agencia\n\n**Descripción:**\n\nEste endpoint permite actualizar una prouducto existente utilizando su ID. Si se proporciona un nuevo nombre, se actualizan los campos correspondientes. Si no se proporciona un nuevo valor para algún campo, se mantiene el valor actual.\n\n**URL:**\n\n**POST:** _/api/products/update/{id}/_\n\nParámetros:\n\n- id (requerido): El ID de la producto que se desea actualizar. (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- name: Nombre del producto.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/delete/1111/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"delete",
+								"1111",
+								""
+							]
+						},
+						"description": "## **ELIMINAR PRODUCTO**\n\n**Endpoint**: Eliminar producto\n\n**Descripción:**\n\nEste endpoint permite eliminar un producto utilizando su ID. Si la agencia tiene productos asociados, no se podrá eliminar, y se devolverá un error. Si no se encuentra la agencia con el ID especificado, se devuelve un error indicando que no existe.\n\n**URL:**\n\n**POST:** _/api/products/delete/{id}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la producto que se desea eliminar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				},
+				{
+					"name": "Top-Stock-Franchise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/stock-max/6/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"stock-max",
+								"6",
+								""
+							]
+						},
+						"description": "### PRODUCTOS CON EL MAYOR STOCK POR FRANQUICIA\n\n**Endpoint**: Obtener productos con el mayor stock de una franquicia\n\n**Descripción:**\n\nEste endpoint permite obtener los productos que tienen el mayor stock disponible para una franquicia específica. Si no se encuentra la franquicia o si no hay productos disponibles para ella, se devolverán respuestas correspondientes.\n\n**URL:**\n\n**POST:** _/api/products/stock-max/{franchiseId}/_\n\nParámetros:\n\n- id (requerido): Identificador único de la franquicia que se desea consultar (integer).\n    \n\n**Cuerpo de la solicitud:**\n\nSe deben enviar los siguientes campos:\n\n- Ninguno.\n    \n\n**Encabezados:**\n\nNo se requieren encabezados adicionales para esta solicitud.\n\n**Respuesta exitosa:**\n\nCódigo de estado: 200 OK\n\n**Errores y códigos de estado:**\n\n- 404 Not Found: Se devuelve cuando no se encuentran resultados. El cuerpo de la respuesta contendrá un mensaje de error correspondiente.\n    \n- 500 Internal Server Error: Se devuelve cuando ocurre un error inesperado durante la creación de la franquicia."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
