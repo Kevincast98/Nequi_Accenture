@@ -127,11 +127,11 @@ public class AgencyController {
             }
 
             if (agency.getName() != null) {
-                existingAgency.setName(agency.getName()); // Actualizar el nombre si se proporciona uno
+                existingAgency.setName(agency.getName());
             }
 
             if (agency.getFranchise() != null) {
-                existingAgency.setFranchise(agency.getFranchise()); // Si se pasa una nueva franquicia, actualizamos
+                existingAgency.setFranchise(agency.getFranchise());
             }
 
             Agency updatedAgency = agencyService.updateAgency(existingAgency);
@@ -166,7 +166,7 @@ public class AgencyController {
         if (hasAssociatedProducts) {
             response.put("detail", "The agency cannot be deleted because it has associated products.");
             response.put("success", false);
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);  // 400 BAD REQUEST
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
         }
 
         boolean isDeleted = agencyService.deleteAgency(id);
@@ -174,12 +174,12 @@ public class AgencyController {
         if (isDeleted) {
             response.put("detail", "The agency was deleted successfully.");
             response.put("success", true);
-            return ResponseEntity.ok(response); // 200 OK
+            return ResponseEntity.ok(response);
         }
 
         response.put("detail", "Agency not found.");
         response.put("success", false);
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response); // 404 NOT FOUND
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
 
 
